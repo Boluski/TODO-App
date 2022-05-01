@@ -1,6 +1,8 @@
 function getInput(){
-    let task = document.querySelector('.addTask').value;
-    return task;
+    let task = document.querySelector('.addTask');
+    let data = task.value;
+    task.value = '';
+    return data;
 }
 
 function makeTask(taskName){
@@ -23,8 +25,12 @@ function makeTask(taskName){
     container.appendChild(taskDiv);
 }
 
-// run only when the return button is pressed
-function addNew(){
-    let newTask = getInput();
-    makeTask(newTask);
-}
+let task = document.querySelector('.addTask');
+
+task.addEventListener('keydown', (event) => {
+    if(event.key == 'Enter'){
+        let newTask = getInput();
+        makeTask(newTask);
+    }
+})
+
