@@ -40,7 +40,9 @@ let task = document.querySelector('.addTask');
 task.addEventListener('keydown', (event) => {
     if(event.key == 'Enter'){
         let newTask = getInput();
-        makeTask(newTask);
+        if(newTask != ''){
+            makeTask(newTask);
+        }
     }
 })
 
