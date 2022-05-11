@@ -4,7 +4,7 @@
 
 ## Description
 
-This is a basic TODO app
+This is a basic TODO app that is able to add and delete and mark ad complete new tasks.
 
 ---
 
